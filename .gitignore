@@ -1,0 +1,21 @@
+# Debug symbols
+*.dSYM/
+main.dSYM/
+
+# VS Code settings
+.vscode/
+
+# Compiled binaries
+a.out
+*.exe
+*.o
+*.obj
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
