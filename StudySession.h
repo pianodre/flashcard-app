@@ -8,7 +8,7 @@
 
 class StudySession {
     public:
-        StudySession(Deck deck);
+        StudySession(Deck& deck);
         ~StudySession();
         void startSession();
         void displayFront();
@@ -17,7 +17,7 @@ class StudySession {
         
 
     private:
-        Deck deck;
+        Deck& deck;
         Flashcard currentCard;
 };
 

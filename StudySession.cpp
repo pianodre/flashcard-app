@@ -1,7 +1,6 @@
 #include "StudySession.h"
 
-StudySession::StudySession(Deck deck) {
-    this->deck = deck;
+StudySession::StudySession(Deck& deck) : deck(deck) {
 }
 
 StudySession::~StudySession() {}

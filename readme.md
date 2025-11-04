@@ -4,69 +4,55 @@ A console-based flashcard application for studying and memorization.
 
 ## Current Features
 
-- **Flashcard Class**: Basic flashcard with front/back content
-- **Deck Class**: Collection management for flashcards
-- **Basic Operations**: Create, store, and access flashcards
+- **Flashcard Class**: Basic flashcard with front/back content and difficulty rating
+- **Deck Class**: Collection management for flashcards with file I/O
+- **Study Session**: Interactive console-based study loop with difficulty rating
+- **File Persistence**: Save/load decks from text files
 
 ## TODO: Study System Development
 
-### Phase 1: Enhanced Flashcard Model ⏳
+### Phase 1: Basic Flashcard Model ✅
 
-- [X] Extend `Flashcard` class with study-related properties:
-  - [X] `difficulty` (1-5 scale)
-  - [X] `lastReviewed` (timestamp)
-  - [X] `nextReview` (timestamp)
-  - [X] `timesCorrect` / `timesIncorrect` counters
-  - [X] `consecutiveCorrect` streak
+- [X] Implement `Flashcard` class with:
+  - [X] `front` and `back` content
+  - [X] `difficulty` rating (1-3 scale)
 - [X] Add corresponding getters/setters
-- [X] Update constructors to handle new properties
+- [X] Basic constructor implementation
 
-### Phase 2: Study Session Core 📚
+### Phase 2: Study Session Core ✅
 
 - [X] Create `StudySession` class with:
   - [X] Session initialization with a deck
   - [X] Current card tracking
-  - [X] Answer validation methods
-  - [X] Session statistics collection
+  - [X] Difficulty rating interface
   - [X] Basic console-based study loop
 - [X] Implement session state management
-- [X] Add session summary/results display
+- [X] Add basic session summary
 
-### Phase 3: Basic Study Loop 🔄
+### Phase 3: File Persistence ✅
 
-- [X] Implement console-based study interface:
-  - [X] Show front of card, wait for user input
-  - [X] Reveal back, ask for self-assessment (correct/incorrect)
-  - [X] Update card statistics based on performance
-  - [ ] Move to next card with basic shuffling
-- [ ] Add study mode selection (all cards, new cards, review)
-- [ ] Implement card shuffling and randomization
+- [X] Implement file I/O capabilities:
+  - [X] Save/load decks to/from files
+  - [X] Simple text-based format (front, back, difficulty)
+- [X] Data validation for loaded files
+- [ ] Backup/restore functionality
 
-### Phase 4: Persistence 💾
+### Phase 4: Enhanced Study Features 🚀
 
-- [ ] Add file I/O capabilities:
-  - [ ] Save/load decks to/from files
-  - [ ] Persist study statistics and progress
-  - [ ] Simple text-based format initially
-- [ ] Implement data validation for loaded files
-- [ ] Add backup/restore functionality
-
-### Phase 5: Advanced Features 🚀
-
-- [ ] Implement spaced repetition system:
-  - [ ] Basic interval calculation based on performance
-  - [ ] Priority queue for due cards
-  - [ ] Different study modes (new cards, review, all)
-- [ ] Add progress tracking and statistics:
-  - [ ] `Statistics` class for long-term progress
-  - [ ] Accuracy rates and streak counters
-  - [ ] Mastery level tracking
+- [ ] Add study mode selection:
+  - [ ] Review mode (difficult cards only)
+  - [ ] All cards mode
+  - [ ] Random vs. ordered study
+- [ ] Improve user experience:
+  - [ ] Better input validation
+  - [ ] Progress indicators during session
+  - [ ] Enhanced session summaries
 - [ ] Multiple study approaches:
   - [ ] Traditional flashcard review
   - [ ] Multiple choice mode
   - [ ] Typing practice mode
 
-### Phase 6: Polish & Optimization ✨
+### Phase 5: Polish & Optimization ✨
 
 - [ ] Error handling and input validation
 - [ ] Performance optimization for large decks
@@ -84,7 +70,7 @@ A console-based flashcard application for studying and memorization.
 ### Building
 
 ```bash
-g++ -o flashcard_app main.cpp Flashcard.cpp Deck.cpp
+g++ -o flashcard_app main.cpp Flashcard.cpp Deck.cpp StudySession.cpp
 ```
 
 ### Running
@@ -102,6 +88,9 @@ cpp/
 ├── Flashcard.cpp     # Flashcard class implementation
 ├── Deck.h           # Deck class header
 ├── Deck.cpp         # Deck class implementation
+├── StudySession.h    # Study session class header
+├── StudySession.cpp  # Study session class implementation
+├── decks/           # Directory containing deck files
 └── README.md        # This file
 ```
 
