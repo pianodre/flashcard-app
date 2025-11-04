@@ -8,9 +8,13 @@ Flashcard::Flashcard(string front, string back) {
     this->front = front;
     this->back = back;
     difficulty = 1;
-    timesCorrect = 0;
-    timesIncorrect = 0;
-    consecutiveCorrect = 0;
+}
+
+// Overload Constructor
+Flashcard::Flashcard(string front, string back, int difficulty) {
+    this->front = front;
+    this->back = back;
+    this->difficulty = difficulty;
 }
 
 // Deconstructor
@@ -26,32 +30,14 @@ void Flashcard::setBack(string Back) {
 void Flashcard::setDifficulty(int difficulty) {
     this->difficulty = difficulty;
 }
-void Flashcard::setTimesCorrect(int timesCorrect) {
-    this->timesCorrect = timesCorrect;
-}
-void Flashcard::setTimesIncorrect(int timesIncorrect) {
-    this->timesIncorrect = timesIncorrect;
-}
-void Flashcard::setConsecutiveCorrect(int consecutiveCorrect) {
-    this->consecutiveCorrect = consecutiveCorrect;
-}
 
 // Getters
-string Flashcard::getFront() {
+string Flashcard::getFront() const {
     return front;
 }
-string Flashcard::getBack() {
+string Flashcard::getBack() const {
     return back;
 }
-int Flashcard::getDifficulty() {
+int Flashcard::getDifficulty() const {
     return difficulty;
-}
-int Flashcard::getTimesCorrect() {
-    return timesCorrect;
-}
-int Flashcard::getTimesIncorrect() {
-    return timesIncorrect;
-}
-int Flashcard::getConsecutiveCorrect() {
-    return consecutiveCorrect;
 }

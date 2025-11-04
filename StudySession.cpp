@@ -12,6 +12,8 @@ void StudySession::startSession() {
         return;
     }
 
+    deck.shuffleWithinDifficulty();  // Shuffle within each difficulty group
+
     cout << "Starting study session for " << deck.getFlashcardCount() << " cards." << endl;
     cout << "Deck: " << deck.getDeckName() << endl;
     cout << "Press Enter to begin...." << endl;
@@ -23,39 +25,42 @@ void StudySession::startSession() {
     int totalStudied = 0;
 
     // Main Study Loop
-    while (currentIndex < deck.getFlashcardCount()) {
-        currentCard = deck.getFlashcardAt(currentIndex);
+    while (true) {
+        if (currentIndex >= deck.getFlashcardCount()) {
+            currentIndex = 0;
+            deck.shuffleWithinDifficulty();  // Shuffle within each difficulty group
+        }
+        
+        Flashcard& currentCardRef = deck.getFlashcardAt(currentIndex);
 
-        cout << "\nFront: " << currentCard.getFront() << endl;
+        cout << "\nFront: " << currentCardRef.getFront() << " : " << currentCardRef.getDifficulty() << endl;
         cout << "Press Enter to reveal back..." << endl;
         cin.ignore(); // Waits for user input
 
-        cout << "\nBack: " << currentCard.getBack() << endl;
+        cout << "\nBack: " << currentCardRef.getBack() << endl;
 
-        cout << "Enter '1-5' to rate difficulty: ";
-        char response;
+        cout << "Enter '1-3' to rate difficulty or 'exit' to quit: ";
+        string response;
         cin >> response;
         cin.ignore(); // Waits for user input
 
-        if (response == '1') {
-            currentCard.setDifficulty(1);
-        } else if (response == '2') {
-            currentCard.setDifficulty(2);
-        } else if (response == '3') {
-            currentCard.setDifficulty(3);
-        } else if (response == '4') {
-            currentCard.setDifficulty(4);
-        } else if (response == '5') {
-            currentCard.setDifficulty(5);
+        if (response == "exit") {
+            cout << "Exiting study session..." << endl;
+            break;
+        } else if (response == "1") {
+            currentCardRef.setDifficulty(1);
+        } else if (response == "2") {
+            currentCardRef.setDifficulty(2);
+        } else if (response == "3") {
+            currentCardRef.setDifficulty(3);
         }
         
         totalStudied++;
         currentIndex++;
+        
     }
     
     cout << "Total Studied: " << totalStudied << endl;
-    cout << "Correct: " << correctCount << endl;
-    cout << "Incorrect: " << totalStudied - correctCount << endl;
     cout << "Press Enter to return to main menu..." << endl;
     cin.ignore(); // Waits for user input
 

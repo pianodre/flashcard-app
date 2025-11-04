@@ -37,6 +37,9 @@
         "__hash_table": "cpp",
         "initializer_list": "cpp",
         "iterator": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "sstream": "cpp",
+        "iosfwd": "cpp",
+        "filesystem": "cpp"
     }
 }

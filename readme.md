@@ -23,7 +23,7 @@ A console-based flashcard application for studying and memorization.
 
 ### Phase 2: Study Session Core 📚
 
-- [ ] Create `StudySession` class with:
+- [X] Create `StudySession` class with:
   - [X] Session initialization with a deck
   - [X] Current card tracking
   - [X] Answer validation methods
@@ -112,4 +112,3 @@ cpp/
 - Multi-user support
 - Cloud synchronization
 - Mobile app version
-# flashcard-app
