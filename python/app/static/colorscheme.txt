@@ -1,0 +1,7 @@
+#1A1A1A Dark Charcoal (Background)
+#FFFFFF Pure White (Text)
+#00D4FF Bright Cyan (Primary Accent)
+#2A2A2A Card Background (Navigation/Cards)
+#00FF88 Green (Manage Button)
+#FF6B00 Orange (Import Button)
+#FF4444 Red (Exit Button)

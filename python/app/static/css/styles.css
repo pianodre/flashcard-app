@@ -1,0 +1,108 @@
+/* 
+    Universal styles for all pages
+    Contains: Background, Navigation, Typography
+*/
+
+body {
+  background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+  color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar - Universal */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw 5vw;
+  background: rgba(42, 42, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 12vw;
+  width: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+}
+
+.nav-menu {
+  display: flex;
+  gap: 4vw;
+}
+
+.nav-item {
+  color: #FFFFFF;
+  font-size: 3.5vw;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 2vw;
+  border-radius: 2vw;
+}
+
+.nav-item:hover {
+  opacity: 1;
+  background: rgba(0, 212, 255, 0.1);
+  color: #00D4FF;
+}
+
+/* Main Content Container - Universal */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 5vw;
+}
+
+/* Universal Typography */
+h1 {
+  color: #00D4FF;
+  font-weight: 700;
+  font-size: 7vw;
+  margin: 0 0 2vw 0;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+h2 {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 5vw;
+  margin: 0 0 3vw 0;
+}
+
+p {
+  color: #FFFFFF;
+  font-size: 4vw;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Universal Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}

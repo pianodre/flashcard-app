@@ -1,0 +1,123 @@
+/* 
+    Study page specific styles
+*/
+
+/* Study Page Header */
+.study-header {
+  text-align: center;
+  margin-bottom: 6vw;
+}
+
+.study-header h1 {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.study-header p {
+  font-style: italic;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Deck List Container */
+.deck-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Individual Deck Cards */
+.deck-card {
+  background: linear-gradient(145deg, #2A2A2A, #1A1A1A);
+  border: 2px solid #00D4FF;
+  border-radius: 4vw;
+  padding: 4vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 212, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deck-card:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+  background: linear-gradient(145deg, #00D4FF, #0099CC);
+  color: #1A1A1A;
+}
+
+.deck-info {
+  flex: 1;
+}
+
+.deck-name {
+  font-size: 4.5vw;
+  font-weight: 600;
+  margin-bottom: 1vw;
+}
+
+.deck-stats {
+  font-size: 3.2vw;
+  opacity: 0.7;
+}
+
+.deck-icon {
+  font-size: 8vw;
+  margin-left: 3vw;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 10vw 5vw;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.empty-state h2 {
+  color: #00D4FF;
+  margin-bottom: 3vw;
+}
+
+.empty-state p {
+  opacity: 0.6;
+  margin-bottom: 5vw;
+}
+
+.create-deck-btn {
+  background: linear-gradient(145deg, #00FF88, #00CC66);
+  border: none;
+  color: #1A1A1A;
+  padding: 4vw 8vw;
+  border-radius: 3vw;
+  font-size: 4vw;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
+.create-deck-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5);
+}
+
+/* Back Button */
+.back-btn {
+  background: rgba(42, 42, 42, 0.8);
+  border: 2px solid #666666;
+  color: #FFFFFF;
+  padding: 3vw 6vw;
+  border-radius: 3vw;
+  font-size: 3.5vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 4vw;
+  display: inline-flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.back-btn:hover {
+  background: #666666;
+  transform: translateY(-1px);
+}

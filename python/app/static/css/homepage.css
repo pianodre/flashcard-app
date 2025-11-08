@@ -1,0 +1,125 @@
+/* 
+    Homepage specific styles
+*/
+
+/* Main Content - Homepage Layout */
+.main-content {
+  justify-content: center;
+  text-align: center;
+}
+/* Header Section */
+.header {
+  margin-bottom: 8vw;
+  text-align: center;
+}
+
+/* Homepage specific animations */
+.header h1 {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.header p {
+  font-style: italic;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Base Button styles */
+button {
+  background: linear-gradient(145deg, #2A2A2A, #1A1A1A);
+  border: 2px solid #00D4FF;
+  color: #FFFFFF;
+  padding: 4vw;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  font-size: 4vw;
+  font-weight: 500;
+  margin: 2vw auto;
+  cursor: pointer;
+  width: 80vw;
+  min-height: 14vw;
+  border-radius: 4vw;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 212, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-icon {
+  font-size: 6vw;
+  min-width: 6vw;
+}
+
+.btn-text {
+  flex: 1;
+  font-weight: 600;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Unique button colors */
+.study-btn {
+  border-color: #00D4FF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.manage-btn {
+  border-color: #00FF88;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.import-btn {
+  border-color: #FF6B00;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 107, 0, 0.2);
+}
+
+/* Button Hover Effects */
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.study-btn:hover {
+  background: linear-gradient(145deg, #00D4FF, #0099CC);
+  color: #1A1A1A;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+}
+
+.manage-btn:hover {
+  background: linear-gradient(145deg, #00FF88, #00CC66);
+  color: #1A1A1A;
+  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+}
+
+.import-btn:hover {
+  background: linear-gradient(145deg, #FF6B00, #CC5500);
+  color: #FFFFFF;
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+}
+
+/* Button Active State */
+button:active {
+  transform: translateY(0); /* Return to original position */
+  box-shadow: 0 2px 6px rgba(0, 122, 255, 0.2);
+}
+
+/* Specific Button Styles */
+.exit-button {
+  border-color: #FF4444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 68, 68, 0.2);
+}
+
+.exit-button:hover {
+  background: linear-gradient(145deg, #FF4444, #CC3333);
+  color: #FFFFFF;
+  box-shadow: 0 8px 25px rgba(255, 68, 68, 0.4);
+}

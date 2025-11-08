@@ -1,4 +1,4 @@
-# Flashcard App
+# Revu Flashcard App
 
 A spaced repetition flashcard application built in Python, designed to help with learning and memorization through intelligent review scheduling.
 
@@ -63,9 +63,9 @@ This console application is planned to evolve into a full-featured web applicati
 
 - **Flask Web Framework**: Modern web interface
 - **Spaced Repetition System**: Intelligent review scheduling based on performance
-- **Interactive Buttons**: 
+- **Interactive Buttons**:
   - 🔴 **Hard** (Red): Review again within 1 minute
-  - 🔵 **Okay** (Blue): Review again within 10 minutes  
+  - 🔵 **Okay** (Blue): Review again within 10 minutes
   - 🟢 **Easy** (Green): Review next calendar day (resets at 12 AM)
 - **Progress Tracking**: Monitor learning progress over time
 - **Persistent Storage**: Save decks and progress between sessions

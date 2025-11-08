@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study Decks - Revu</title>
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <link rel="stylesheet" href="../static/css/study.css">
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="../static/images/revu-logo.png" alt="Revu Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <span class="nav-item">Stats</span>
+                <span class="nav-item">Settings</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Study Header -->
+            <div class="study-header">
+                <h1>Choose a Deck to Study</h1>
+                <p>Select a deck to start your learning session</p>
+            </div>
+
+            <!-- Deck List -->
+            <div class="deck-list">
+                <!-- Sample Deck 1 -->
+                <a href="flashcard.html" style="text-decoration: none; color: inherit;">
+                    <div class="deck-card">
+                        <div class="deck-info">
+                            <div class="deck-name">Python Basics</div>
+                            <div class="deck-stats">25 cards • 5 due for review</div>
+                        </div>
+                        <div class="deck-icon">🐍</div>
+                    </div>
+                </a>
+
+                <!-- Sample Deck 2 -->
+                <div class="deck-card">
+                    <div class="deck-info">
+                        <div class="deck-name">Spanish Vocabulary</div>
+                        <div class="deck-stats">48 cards • 12 due for review</div>
+                    </div>
+                    <div class="deck-icon">🇪🇸</div>
+                </div>
+
+                <!-- Sample Deck 3 -->
+                <div class="deck-card">
+                    <div class="deck-info">
+                        <div class="deck-name">Math Formulas</div>
+                        <div class="deck-stats">32 cards • 8 due for review</div>
+                    </div>
+                    <div class="deck-icon">📐</div>
+                </div>
+
+                <!-- Sample Deck 4 -->
+                <div class="deck-card">
+                    <div class="deck-info">
+                        <div class="deck-name">History Facts</div>
+                        <div class="deck-stats">19 cards • 3 due for review</div>
+                    </div>
+                    <div class="deck-icon">🏛️</div>
+                </div>
+            </div>
+
+            <!-- Empty State (hidden by default, shown when no decks) -->
+            <!-- 
+            <div class="empty-state" style="display: none;">
+                <h2>No Decks Found</h2>
+                <p>You don't have any decks yet. Create your first deck to start studying!</p>
+                <button class="create-deck-btn">Create Your First Deck</button>
+            </div>
+            -->
+        </div>
+    </body>
+</html>

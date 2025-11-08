@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study Session - Revu</title>
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <link rel="stylesheet" href="../static/css/flashcard.css">
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="../static/images/revu-logo.png" alt="Revu Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <span class="nav-item">Stats</span>
+                <span class="nav-item">Settings</span>
+            </div>
+        </nav>
+
+        <!-- Progress Info -->
+        <div class="progress-info">
+            Card 3 of 25
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="flashcard-container">
+                <!-- Flashcard -->
+                <div class="card-flip-container">
+                    <div class="flashcard" id="flashcard">
+                        <!-- Front of Card (Question) -->
+                        <div class="card-face card-front">
+                            <div class="card-content">
+                                What is a variable in Python?
+                            </div>
+                            <div class="tap-instruction">
+                                Tap to reveal answer
+                            </div>
+                        </div>
+                        
+                        <!-- Back of Card (Answer) -->
+                        <div class="card-face card-back">
+                            <div class="card-content">
+                                A variable is a name that refers to a value stored in memory. It acts as a container for data that can be changed during program execution.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difficulty Buttons -->
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn btn-hard">
+                        <div class="btn-icon">&lt; 1m</div>
+                        <div class="btn-text">Hard</div>
+                    </button>
+                    
+                    <button class="difficulty-btn btn-medium">
+                        <div class="btn-icon">&lt; 5m</div>
+                        <div class="btn-text">Medium</div>
+                    </button>
+                    
+                    <button class="difficulty-btn btn-easy">
+                        <div class="btn-icon">1 day</div>
+                        <div class="btn-text">Easy</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
