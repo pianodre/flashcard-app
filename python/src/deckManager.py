@@ -18,7 +18,7 @@ from flashcard import Flashcard
 
 class DeckManager:
     def __init__(self):
-        self.decks_folder = "decks"
+        self.decks_folder = "../decks"
         self.ensure_decks_folder()
 
     def ensure_decks_folder(self):
