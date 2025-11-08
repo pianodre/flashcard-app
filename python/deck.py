@@ -12,6 +12,9 @@ class Deck:
     def add_flashcard(self, card):
         self.cards.append(card)
 
+    def remove_flashcard(self, card):
+        self.cards.remove(card)
+
     def shuffle_within_difficulty(self):
         # Sort by difficulty
         self.cards.sort(key=lambda c: c.difficulty)

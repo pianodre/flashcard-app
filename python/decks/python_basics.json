@@ -1,0 +1,42 @@
+{
+  "name": "Python Basics",
+  "created_date": "2025-11-08T11:29:53.987816",
+  "last_studied": "2025-11-08T11:29:53.987816",
+  "cards": [
+    {
+      "question": "What is a variable in Python?",
+      "answer": "A variable is a name that refers to a value stored in memory",
+      "difficulty": 3,
+      "times_studied": 1,
+      "last_review": "2025-11-08T11:30:25.194975"
+    },
+    {
+      "question": "What does 'len()' function do?",
+      "answer": "Returns the number of items in an object",
+      "difficulty": 3,
+      "times_studied": 1,
+      "last_review": "2025-11-08T11:30:28.533945"
+    },
+    {
+      "question": "How do you create a list in Python?",
+      "answer": "Use square brackets: my_list = [1, 2, 3]",
+      "difficulty": 2,
+      "times_studied": 1,
+      "last_review": "2025-11-08T11:30:32.725906"
+    },
+    {
+      "question": "What is the difference between '==' and 'is'?",
+      "answer": "'==' compares values, 'is' compares object identity",
+      "difficulty": 1,
+      "times_studied": 1,
+      "last_review": "2025-11-08T11:30:34.098091"
+    },
+    {
+      "question": "How do you handle exceptions in Python?",
+      "answer": "Use try/except blocks",
+      "difficulty": 1,
+      "times_studied": 1,
+      "last_review": "2025-11-08T11:30:35.464453"
+    }
+  ]
+}
