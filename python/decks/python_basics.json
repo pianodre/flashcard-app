@@ -7,41 +7,41 @@
       "question": "What is a variable in Python?",
       "answer": "A variable is a name that refers to a value stored in memory",
       "difficulty": 3,
-      "times_studied": 2,
-      "last_review": "2025-11-08T12:33:09.573263",
-      "next_review": "2025-11-08T12:38:09.573295"
+      "times_studied": 3,
+      "last_review": "2025-11-08T13:06:34.104970",
+      "next_review": "2025-11-08T13:11:34.104990"
     },
     {
       "question": "What does 'len()' function do?",
       "answer": "Returns the number of items in an object",
       "difficulty": 3,
-      "times_studied": 3,
-      "last_review": "2025-11-08T12:33:10.410942",
-      "next_review": "2025-11-08T12:38:10.410977"
+      "times_studied": 4,
+      "last_review": "2025-11-08T13:06:34.956837",
+      "next_review": "2025-11-08T13:11:34.956857"
     },
     {
       "question": "How do you create a list in Python?",
       "answer": "Use square brackets: my_list = [1, 2, 3]",
       "difficulty": 3,
-      "times_studied": 3,
-      "last_review": "2025-11-08T12:33:11.979946",
-      "next_review": "2025-11-08T12:38:11.979977"
+      "times_studied": 4,
+      "last_review": "2025-11-08T13:06:35.869607",
+      "next_review": "2025-11-08T13:11:35.869654"
     },
     {
       "question": "What is the difference between '==' and 'is'?",
       "answer": "'==' compares values, 'is' compares object identity",
-      "difficulty": 1,
-      "times_studied": 4,
-      "last_review": "2025-11-08T12:34:13.122473",
-      "next_review": "2025-11-08T12:34:43.122511"
+      "difficulty": 2,
+      "times_studied": 6,
+      "last_review": "2025-11-08T13:07:15.084394",
+      "next_review": "2025-11-08T13:08:15.084451"
     },
     {
       "question": "How do you handle exceptions in Python?",
       "answer": "Use try/except blocks",
-      "difficulty": 3,
-      "times_studied": 3,
-      "last_review": "2025-11-08T12:34:16.152547",
-      "next_review": "2025-11-08T12:39:16.152597"
+      "difficulty": 2,
+      "times_studied": 4,
+      "last_review": "2025-11-08T13:06:38.573948",
+      "next_review": "2025-11-08T13:07:38.573971"
     }
   ]
 }

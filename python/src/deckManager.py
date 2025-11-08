@@ -18,7 +18,10 @@ from flashcard import Flashcard
 
 class DeckManager:
     def __init__(self):
-        self.decks_folder = "../decks"
+        # Get the directory where this file is located (src/)
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # Go up one level to the python/ directory, then into decks/
+        self.decks_folder = os.path.join(os.path.dirname(current_dir), "decks")
         self.ensure_decks_folder()
 
     def ensure_decks_folder(self):
