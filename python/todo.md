@@ -181,8 +181,8 @@
    - [X] ~~Add `next_review` parameter when loading flashcards in `load_deck()`~~ (Fixed: set as separate attribute)
 3. **Update Deck class** (`deck.py`):
 
-   - [X] Add `getDueCards()` method to filter cards ready for review
-   - [X] Add `getCardsByDifficulty(difficulty)` method for filtering
+   - [X] Add `get_due_cards()` method to filter cards ready for review
+   - [X] Add `get_cards_by_difficulty(difficulty)` method for filtering
 4. **Update testDeck function** (`testFunctions.py`):
 
    - [X] Add option to study "All cards" vs "Due cards only"

@@ -257,7 +257,7 @@ def _delete_deck(deck_manager):
     except ValueError:
         print("Please enter a valid number!")
 
-def testDeck():
+def test_deck():
     """Loop through a deck and allow editing difficulty of each flashcard"""
     deck_manager = DeckManager()
     
@@ -294,7 +294,7 @@ def testDeck():
         return
     
     # Get due cards and show statistics
-    due_cards = current_deck.getDueCards()
+    due_cards = current_deck.get_due_cards()
     total_cards = len(current_deck.cards)
     due_count = len(due_cards)
     
@@ -369,6 +369,8 @@ def testDeck():
                 old_difficulty = card.get_difficulty()
                 card.edit_flashcard(card.get_question(), card.get_answer(), int(new_difficulty))
                 print(f"Difficulty changed from {old_difficulty} to {new_difficulty}")
+
+                deck_manager.save_deck(current_deck)  # Save immediately after each card
                 
                 # Show when this card will be reviewed next
                 if hasattr(card, 'next_review') and card.next_review:
@@ -387,7 +389,7 @@ def testDeck():
     deck_manager.save_deck(current_deck)
     print(f"\nDeck '{current_deck.name}' has been saved with any changes!")
 
-def testImportExport():
+def test_import_export():
     """Test the import/export functionality for text files"""
     io_control = IOControl()
     

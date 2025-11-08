@@ -26,17 +26,20 @@ class Deck:
                 end += 1
             random.shuffle(self.cards[start:end])
             start = end
+    
+    def shuffle_all(self):
+        random.shuffle(self.cards)
 
-    def getDueCards(self):
+    def get_due_cards(self):
         return [card for card in self.cards if card.is_due_for_review()]
     
-    def getCardsByDifficulty(self, difficulty):
+    def get_cards_by_difficulty(self, difficulty):
         return [card for card in self.cards if card.get_difficulty() == difficulty]
 
-    def getDeckLength(self):
+    def get_deck_length(self):
         return len(self.cards)
 
-    def getCurrentIndex(self):
+    def get_current_index(self):
         return self.current_index
     
     def next_card(self):

@@ -9,7 +9,7 @@ def main():
     while True:
         print("\n🎴 Flashcard App")
         print("=" * 30)
-        print("1. Study a deck (testDeck)")
+        print("1. Study a deck (test_deck)")
         print("2. Manage decks (create/edit/delete)")
         print("3. Import/Export .txt files")
         print("4. Exit")
@@ -17,11 +17,11 @@ def main():
         choice = input("\nSelect an option (1-4): ").strip()
         
         if choice == "1":
-            testDeck()
+            test_deck()
         elif choice == "2":
             manage_decks()
         elif choice == "3":
-            testImportExport()
+            test_import_export()
         elif choice == "4":
             print("Goodbye!")
             break
