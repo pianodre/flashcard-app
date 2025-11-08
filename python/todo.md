@@ -13,21 +13,15 @@
   - [X] Load decks from files (JSON)
   - [X] Save deck progress
   - [X] Multiple deck selection
-  - [ ] Deck statistics (total cards, completion rate)
-- [ ] **Study session features**
-
-  - [ ] Session timer
-  - [ ] Review only difficult cards option
-  - [ ] Randomize all cards option
-  - [ ] Study session summary
+  - [X] Deck statistics
 
 ### Data Persistence
 
 - [X] **File-based storage**
+
   - [X] Save/load flashcard decks
   - [X] Track study history (difficulty changes, timestamps)
-  - [ ] Store user preferences
-  - [ ] Export/import functionality
+  - [X] Export/import functionality
 
 ## Phase 2: Spaced Repetition System 🧠
 
@@ -35,13 +29,17 @@
 
 - [ ] **Implement spaced repetition logic**
 
-  - [ ] Add timestamp tracking to flashcards
-  - [ ] Implement review intervals (1 min, 10 min, next day)
-  - [ ] Add card state management (new, learning, review)
-  - [ ] Create scheduling algorithm
-- [ ] **Performance tracking**
+  - [X] Add timestamp tracking to flashcards (already in edit_flashcard)
+  - [X] Add next_review field to Flashcard class
+  - [X] Implement review intervals based on difficulty:
+    - Difficulty 1 (Hard) → < 30 seconds
+    - Difficulty 2 (Medium) → < 1 minute
+    - Difficulty 3 (Easy) → 5 minutes
+  - [ ] Create scheduling algorithm in _calculate_next_review method
+  - [ ] Add is_due_for_review method to check if card should be shown
+- [ ] **Performance tracking** (Future - GUI will handle with 3 buttons)
 
-  - [ ] Track correct/incorrect answers
+  - [ ] Track correct/incorrect answers (will use difficulty selection as performance indicator)
   - [ ] Calculate success rates
   - [ ] Adjust intervals based on performance
   - [ ] Add streak counters
@@ -137,6 +135,7 @@
 ## Immediate Next Steps (This Week)
 
 ### DeckManager Implementation Priority Order ✅ COMPLETED
+
 1. **✅ Implement create_deck(self, deck) function** - Create new decks
 2. **✅ Implement save_deck(self, deck) function** - Persist decks to JSON files
 3. **✅ Implement load_deck(self, deck_name) function** - Load existing decks from storage
@@ -145,6 +144,7 @@
 6. **✅ Implement remove_deck(self, deck) function** - Delete entire decks
 
 ### Other Tasks
+
 1. **✅ Fix current bugs in console version** - Fixed file loading issues
 2. **✅ Implement basic user interaction flow** - Created testDeck() function for studying
 3. **✅ Add file-based deck loading** - JSON loading/saving working perfectly
@@ -153,28 +153,50 @@
 ## Current Status (Nov 8, 2025) 🎉
 
 ### ✅ Major Accomplishments Today
+
 - **Complete DeckManager class** with all CRUD operations working
 - **Interactive study function** (`testDeck()`) for going through flashcards
 - **Difficulty editing system** allowing users to adjust card difficulty during study
 - **Robust file handling** with JSON persistence and error handling
-- **Comprehensive testing suite** covering all DeckManager functions
+- **Comprehensive deck management** (create, edit, delete, view statistics)
+- **Import/Export functionality** for .txt files with proper formatting
 - **Working deck collection** with Spanish vocab, Math problems, and Python basics
 
 ### 🎯 Next Immediate Priorities
-1. **Enhanced study features**
-   - [ ] Add session timer to track study time
-   - [ ] Implement "review only difficult cards" filter
-   - [ ] Add study session summary with statistics
-   
-2. **User experience improvements**
-   - [ ] Add deck creation wizard in console
-   - [ ] Implement deck statistics display
-   - [ ] Add bulk card import from CSV/text files
 
-3. **Spaced repetition preparation**
-   - [ ] Add timestamp tracking to flashcard reviews
-   - [ ] Implement basic interval scheduling
-   - [ ] Track performance metrics (correct/incorrect ratios)
+## **CURRENT FOCUS: Spaced Repetition Implementation**
+
+### Step-by-Step Implementation Guide:
+
+1. **Update Flashcard class** (`flashcard.py`):
+
+   - [ ] Add `next_review` parameter to `__init__` method
+   - [ ] Import `timedelta` from datetime
+   - [ ] Add `next_review` field to `to_dict()` method
+   - [ ] Create `_calculate_next_review(difficulty)` method:
+     - Difficulty 1 (Hard) → 30 seconds (for testing)
+     - Difficulty 2 (Medium) → 5 minutes (for testing)
+     - Difficulty 3 (Easy) → 1 day
+   - [ ] Add `is_due_for_review()` method
+   - [ ] Update `edit_flashcard()` to call `_calculate_next_review()`
+2. **Update DeckManager class** (`deckManager.py`):
+
+   - [ ] Add `next_review` parameter when loading flashcards in `load_deck()`
+3. **Update Deck class** (`deck.py`):
+
+   - [ ] Add `get_due_cards()` method to filter cards ready for review
+   - [ ] Add `get_cards_by_difficulty(difficulty)` method for filtering
+4. **Update testDeck function** (`testFunctions.py`):
+
+   - [ ] Add option to study "All cards" vs "Due cards only"
+   - [ ] Show next review time for each card
+   - [ ] Display how many cards are due vs total
+
+### Other Enhancements (Lower Priority):
+
+- [ ] Add session timer to track study time
+- [ ] Add study session summary with statistics
+- [ ] Implement "review only difficult cards" filter
 
 ## Long-term Goals
 

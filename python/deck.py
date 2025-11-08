@@ -27,6 +27,12 @@ class Deck:
             random.shuffle(self.cards[start:end])
             start = end
 
+    def getDueCards(self):
+        return [card for card in self.cards if card.is_due_for_review()]
+    
+    def getCardsByDifficulty(self, difficulty):
+        return [card for card in self.cards if card.get_difficulty() == difficulty]
+
     def getDeckLength(self):
         return len(self.cards)
 

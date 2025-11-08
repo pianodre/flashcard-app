@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class Flashcard:
     def __init__(self, question, answer, difficulty, times_studied=0, last_review=None):
@@ -7,6 +7,7 @@ class Flashcard:
         self.difficulty = difficulty
         self.times_studied = times_studied
         self.last_review = last_review
+        self.next_review = None
 
     def to_dict(self): # turns card into a dictionary in order to load/save it
         return {
@@ -14,7 +15,8 @@ class Flashcard:
             "answer": self.answer,
             "difficulty": self.difficulty,
             "times_studied": self.times_studied,
-            "last_review": self.last_review
+            "last_review": self.last_review,
+            "next_review": self.next_review
         }
 
     def get_question(self):
@@ -35,4 +37,27 @@ class Flashcard:
         self.difficulty = difficulty
         self.last_review = datetime.now().isoformat()
         self.times_studied += 1
+        self.next_review = self._calculate_next_review(difficulty)
         
+    def _calculate_next_review(self, difficulty):
+        """Calculate next review date based on difficulty"""
+        now = datetime.now()
+
+        if difficulty == 1:
+            next_time = now + timedelta(seconds=30)
+        elif difficulty == 2:
+            next_time = now + timedelta(minutes=1)
+        elif difficulty == 3:
+            next_time = now + timedelta(minutes=5) #day=1
+
+        return next_time.isoformat()
+            
+    def is_due_for_review(self):
+        """Check if the card is due for review"""
+        if not self.next_review:
+            return True
+        
+        now = datetime.now()
+        next_review_time = datetime.fromisoformat(self.next_review)
+        return now >= next_review_time
+

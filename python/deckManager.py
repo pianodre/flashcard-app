@@ -91,6 +91,8 @@ class DeckManager:
                     card_data.get('times_studied', 0),
                     card_data.get('last_review', None)
                 )
+                # Set next_review separately since it's not a constructor parameter
+                flashcard.next_review = card_data.get('next_review', None)
                 loaded_deck.add_flashcard(flashcard)
             
             print(f"Deck '{deck_data['name']}' loaded successfully! ({len(loaded_deck.cards)} cards)")
