@@ -100,9 +100,9 @@ function setupEventListeners() {
     const mediumBtn = document.querySelector('.btn-medium');
     const easyBtn = document.querySelector('.btn-easy');
     
-    if (hardBtn) hardBtn.addEventListener('click', () => rateDifficulty(1));
+    if (hardBtn) hardBtn.addEventListener('click', () => rateDifficulty(3));
     if (mediumBtn) mediumBtn.addEventListener('click', () => rateDifficulty(2));
-    if (easyBtn) easyBtn.addEventListener('click', () => rateDifficulty(3));
+    if (easyBtn) easyBtn.addEventListener('click', () => rateDifficulty(1));
 }
 
 // Flip the flashcard
@@ -250,7 +250,7 @@ document.addEventListener('keydown', (event) => {
         switch (event.code) {
             case 'Digit1':
                 event.preventDefault();
-                rateDifficulty(1); // Hard
+                rateDifficulty(1); // Easy
                 break;
             case 'Digit2':
                 event.preventDefault();
@@ -258,7 +258,7 @@ document.addEventListener('keydown', (event) => {
                 break;
             case 'Digit3':
                 event.preventDefault();
-                rateDifficulty(3); // Easy
+                rateDifficulty(3); // Hard
                 break;
         }
     }

@@ -43,12 +43,12 @@ class Flashcard:
         """Calculate next review date based on difficulty"""
         now = datetime.now()
 
-        if difficulty == 1:
+        if difficulty == 1:  # Easy
+            next_time = now + timedelta(days=1)
+        elif difficulty == 2:  # Medium
+            next_time = now + timedelta(minutes=5)
+        elif difficulty == 3:  # Hard
             next_time = now + timedelta(seconds=30)
-        elif difficulty == 2:
-            next_time = now + timedelta(minutes=1)
-        elif difficulty == 3:
-            next_time = now + timedelta(minutes=5) #day=1
 
         return next_time.isoformat()
             

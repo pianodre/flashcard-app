@@ -354,9 +354,9 @@ def test_deck():
         
         # Prompt for difficulty change
         print("\nRate this card:")
-        print("1 - Hard (review in 30 seconds)")
-        print("2 - Medium (review in 5 minutes)") 
-        print("3 - Easy (review tomorrow)")
+        print("1 - Easy (review tomorrow)")
+        print("2 - Medium (review in 5 minutes)")
+        print("3 - Hard (review in 30 seconds)")
         
         while True:
             new_difficulty = input(f"Enter difficulty (1-3) or press Enter to keep current ({card.get_difficulty()}): ").strip()
