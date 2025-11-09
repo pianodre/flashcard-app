@@ -85,24 +85,32 @@ def get_study_cards(deck_name):
 def update_card_difficulty():
     try:
         data = request.get_json() # get JSON data from request
+        print(f"DEBUG: Received data: {data}")
         
         if not all(key in data for key in ['deck_name', 'card_index', 'difficulty']):
             return jsonify({'error': 'Missing required parameters'}), 400
 
         deck = deck_manager.load_deck(data['deck_name']) # load deck
+        print(f"DEBUG: Loaded deck: {deck.name if deck else 'None'}")
         if not deck:
             return jsonify({'error': 'Deck not found'}), 404
             
+        print(f"DEBUG: Deck has {len(deck.cards)} cards, requesting index {data['card_index']}")
         if data['card_index'] >= len(deck.cards):
             return jsonify({'error': 'Card not found'}), 404
             
         card = deck.cards[data['card_index']] # get card
-        card.edit_flashcard(data['difficulty']) # update card difficulty
+        print(f"DEBUG: Found card: {card.question}")
+        # Only update difficulty, keep existing question and answer
+        card.edit_flashcard(card.question, card.answer, data['difficulty']) # update card difficulty
 
         deck_manager.save_deck(deck) # save deck
 
         return jsonify({'success': True}) # return success
     except Exception as e:
+        print(f"DEBUG: Exception occurred: {e}")
+        import traceback
+        traceback.print_exc()
         return jsonify({'error': str(e)}), 500
 
 @main.route('/api/deck/create', methods=['POST'])

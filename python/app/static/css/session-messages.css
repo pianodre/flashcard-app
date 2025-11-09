@@ -1,0 +1,86 @@
+/* Session Message Styles */
+
+.session-complete,
+.no-cards,
+.error-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.session-complete h1 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.no-cards h1 {
+    color: #FF9800;
+    margin-bottom: 1rem;
+}
+
+.error-message h1 {
+    color: #F44336;
+    margin-bottom: 1rem;
+}
+
+.session-complete p,
+.no-cards p,
+.error-message p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.session-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 180px;
+}
+
+.btn-primary:hover {
+    background: #1976D2;
+}
+
+.btn-secondary {
+    background: #757575;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 180px;
+}
+
+.btn-secondary:hover {
+    background: #616161;
+}
+
+.btn-success {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 180px;
+}
+
+.btn-success:hover {
+    background: #45a049;
+}

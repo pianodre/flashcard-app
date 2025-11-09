@@ -1,0 +1,127 @@
+{
+  "name": "Spanish Vocabulary",
+  "created_date": "2025-11-07",
+  "last_studied": "2025-11-07",
+  "cards": [
+    {
+      "question": "Hola",
+      "answer": "Hello",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Adiós",
+      "answer": "Goodbye",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Gracias",
+      "answer": "Thank you",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Por favor",
+      "answer": "Please",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "¿Cómo estás?",
+      "answer": "How are you?",
+      "difficulty": 2,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Me llamo",
+      "answer": "My name is",
+      "difficulty": 2,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "¿Cuánto cuesta?",
+      "answer": "How much does it cost?",
+      "difficulty": 3,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "No entiendo",
+      "answer": "I don't understand",
+      "difficulty": 2,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "¿Dónde está el baño?",
+      "answer": "Where is the bathroom?",
+      "difficulty": 3,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Disculpe",
+      "answer": "Excuse me",
+      "difficulty": 2,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Agua",
+      "answer": "Water",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Comida",
+      "answer": "Food",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Casa",
+      "answer": "House",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Familia",
+      "answer": "Family",
+      "difficulty": 1,
+      "times_studied": 0,
+      "last_review": null,
+      "next_review": null
+    },
+    {
+      "question": "Trabajo",
+      "answer": "Work/Job",
+      "difficulty": 3,
+      "times_studied": 1,
+      "last_review": "2025-11-08T16:49:16.909658",
+      "next_review": "2025-11-08T16:54:16.909663"
+    }
+  ]
+}
