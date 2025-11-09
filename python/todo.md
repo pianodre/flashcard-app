@@ -1,228 +1,96 @@
-# Flashcard App Development Roadmap
+# Flashcard App TODO - November 9, 2025 🎯
 
-## Phase 1: Console Version Completion 🎯
+## 🚀 PRIORITY: Infinite Study Mode Implementation
 
-### Core Console Features
+### **Main Goal: Enable Continuous Study Sessions**
 
-- [X] **User interaction improvements**
+Implement a system that allows users to study a deck infinitely by showing cards even when their `next_review` time hasn't passed yet.
 
-  - [X] Add difficulty rating after viewing each answer (1-3 scale)
-  - [X] Add progress indicator (card X of Y)
-- [X] **Enhanced deck management**
+### **Core Requirements:**
 
-  - [X] Load decks from files (JSON)
-  - [X] Save deck progress
-  - [X] Multiple deck selection
-  - [X] Deck statistics
+1. **Smart Card Selection Logic** 📚
+   - **Primary**: Show cards that are actually due (normal spaced repetition)
+   - **Secondary**: When no cards are due, show cards by difficulty priority:
+     - First: All cards marked as **Hard (difficulty 3)**
+     - Then: All cards marked as **Medium (difficulty 2)**
+     - Last: Cards marked as **Easy (difficulty 1)** only if no Hard/Medium exist
 
-### Data Persistence
+2. **Utilize Existing Shuffle Function** 🔀
+   - Use the existing `shuffle_within_difficulty()` function in `deck.py`
+   - This ensures cards of the same difficulty are randomized
+   - Maintains variety within difficulty groups
 
-- [X] **File-based storage**
+### **Implementation Tasks:**
 
-  - [X] Save/load flashcard decks
-  - [X] Track study history (difficulty changes, timestamps)
-  - [X] Export/import functionality
+#### **Backend Changes (Python):**
+- [ ] **Modify `get_due_cards()` method in `deck.py`**
+  - Add fallback logic when no cards are actually due
+  - Implement priority system: Hard → Medium → Easy
+  - Integrate with `shuffle_within_difficulty()` for randomization
 
-## Phase 2: Spaced Repetition System 🧠
+- [ ] **Update API endpoint `/api/study/<deck_name>`**
+  - Modify to use new infinite study logic
+  - Ensure it returns cards even when none are "due"
+  - Add metadata to indicate if cards are "due" vs "practice"
 
-### Core Algorithm
+#### **Frontend Changes (JavaScript):**
+- [ ] **Update study session UI**
+  - Add visual indicator when studying "practice" cards vs "due" cards
+  - Show different messaging: "No cards due - practicing Hard cards" etc.
+  - Maintain existing difficulty rating functionality
 
-- [X] **Implement spaced repetition logic**
+#### **User Experience Enhancements:**
+- [ ] **Visual Feedback**
+  - Different card border colors for due vs practice cards
+  - Status message showing current study mode
+  - Progress indicator that accounts for infinite study
 
-  - [X] Add timestamp tracking to flashcards (already in edit_flashcard)
-  - [X] Add next_review field to Flashcard class
-  - [X] Implement review intervals based on difficulty:
-    - Difficulty 1 (Hard) → 30 seconds (for testing)
-    - Difficulty 2 (Medium) → 1 minute (for testing)
-    - Difficulty 3 (Easy) → 5 minutes (for testing)
-  - [X] Create scheduling algorithm in _calculate_next_review method
-  - [X] Add is_due_for_review method to check if card should be shown
+- [ ] **Study Session Options**
+  - Allow users to choose: "Due cards only" vs "Infinite study"
+  - Add "Stop studying" button for infinite sessions
+  - Show statistics: "X due cards completed, now practicing"
 
-### Advanced Features
+### **Technical Implementation Notes:**
 
-- [ ] **Smart scheduling**
-  - [ ] Daily review limits
-  - [ ] Priority queue for due cards
-  - [ ] Overdue card handling
-  - [ ] Review session optimization
+#### **Priority Logic:**
+```python
+# Pseudocode for new get_study_cards() method:
+1. Get actually due cards (existing logic)
+2. If due_cards.length > 0: return due_cards
+3. Else:
+   - Get all Hard cards (difficulty 3)
+   - If hard_cards.length > 0: shuffle and return hard_cards
+   - Else get all Medium cards (difficulty 2)
+   - If medium_cards.length > 0: shuffle and return medium_cards
+   - Else get all Easy cards (difficulty 1) as last resort
+```
 
-## Phase 3: Web Application Migration 🌐
+#### **Files to Modify:**
+- `src/deck.py` - Update card selection logic
+- `app/routes.py` - Modify study endpoint
+- `app/static/js/flashcard.js` - Update UI for infinite mode
+- `app/templates/flashcard.html` - Add visual indicators
 
-### Flask Setup
-
-- [ ] **Project restructuring**
-
-  - [ ] Create Flask application structure
-  - [ ] Set up templates directory
-  - [ ] Configure static files (CSS, JS)
-  - [ ] Set up virtual environment
-- [ ] **Backend development**
-
-  - [ ] Convert classes to Flask models
-  - [ ] Create API endpoints
-  - [ ] Implement session management
-  - [ ] Add database integration (SQLite → PostgreSQL)
-
-### Frontend Development
-
-- [ ] **UI/UX Design**
-
-  - [ ] Design card interface mockups
-  - [ ] Create responsive layout
-  - [ ] Design button interactions (Hard/Okay/Easy)
-  - [ ] Implement progress visualizations
-- [ ] **Interactive Features**
-
-  - [ ] Card flip animations
-  - [ ] Button feedback (color coding)
-  - [ ] Progress bars and statistics
-  - [ ] Keyboard shortcuts
-
-### Web-Specific Features
-
-- [ ] **User Management**
-
-  - [ ] User registration/login
-  - [ ] Personal deck collections
-  - [ ] Progress synchronization
-  - [ ] Social features (deck sharing)
-- [ ] **Advanced Web Features**
-
-  - [ ] Mobile responsiveness
-  - [ ] Offline capability (PWA)
-  - [ ] Push notifications for reviews
-  - [ ] Analytics dashboard
-
-## Phase 4: Enhancement & Polish ✨
-
-### Performance Optimization
-
-- [ ] **Backend optimization**
-  - [ ] Database query optimization
-  - [ ] Caching implementation
-  - [ ] API response optimization
-  - [ ] Background task processing
-
-### User Experience
-
-- [ ] **Accessibility**
-
-  - [ ] Screen reader support
-  - [ ] Keyboard navigation
-  - [ ] High contrast mode
-  - [ ] Font size options
-- [ ] **Customization**
-
-  - [ ] Theme selection
-  - [ ] Custom study intervals
-  - [ ] Personalized difficulty algorithms
-  - [ ] Custom card templates
-
-### Testing & Quality
-
-- [ ] **Comprehensive testing**
-  - [ ] Unit tests for all classes
-  - [ ] Integration tests
-  - [ ] User acceptance testing
-  - [ ] Performance testing
-
-## Immediate Next Steps (This Week)
-
-### DeckManager Implementation Priority Order ✅ COMPLETED
-
-1. **✅ Implement create_deck(self, deck) function** - Create new decks
-2. **✅ Implement save_deck(self, deck) function** - Persist decks to JSON files
-3. **✅ Implement load_deck(self, deck_name) function** - Load existing decks from storage
-4. **✅ Implement add_flashcard(self, deck, flashcard) function** - Add cards to decks
-5. **✅ Implement remove_flashcard(self, deck, flashcard) function** - Remove cards from decks
-6. **✅ Implement remove_deck(self, deck) function** - Delete entire decks
-
-### Other Tasks
-
-1. **✅ Fix current bugs in console version** - Fixed file loading issues
-2. **✅ Implement basic user interaction flow** - Created testDeck() function for studying
-3. **✅ Add file-based deck loading** - JSON loading/saving working perfectly
-4. **✅ Create comprehensive test suite** - Full DeckManager testing implemented
-
-## Current Status (Nov 8, 2025) 🎉
-
-### ✅ Major Accomplishments Today
-
-- **Complete DeckManager class** with all CRUD operations working
-- **Interactive study function** (`testDeck()`) for going through flashcards
-- **Difficulty editing system** allowing users to adjust card difficulty during study
-- **Robust file handling** with JSON persistence and error handling
-- **Comprehensive deck management** (create, edit, delete, view statistics)
-- **Import/Export functionality** for .txt files with proper formatting
-- **Working deck collection** with Spanish vocab, Math problems, and Python basics
-- **✅ FIXED: Flashcard initialization bug** - Resolved issue where `next_review` was being passed as constructor parameter
-- **✅ FIXED: UI display correction** - Changed "Next review" to "Last review" in study interface for better UX
-- **🎉 MAJOR MILESTONE: Spaced Repetition System Complete!** - Full working spaced repetition with due card filtering and smart study options
-
-### 🎯 Current Status (Nov 8, 2025 - 4:27 PM)
-
-## **🎉 MAJOR MILESTONE: Flask Web Application Complete!**
-
-### ✅ Web Migration - COMPLETED!
-
-**Flask Backend Setup:**
-
-- [X] **Flask application structure** - `app/__init__.py`, `app/routes.py`, `run.py`
-- [X] **Virtual environment setup** - `venv` with Flask installed
-- [X] **Backend integration** - All console classes (DeckManager, Deck, Flashcard) integrated
-- [X] **REST API endpoints** - Complete CRUD operations for decks and cards
-- [X] **Error handling** - Comprehensive validation and error responses
-- [X] **Spaced repetition integration** - Web API uses existing spaced repetition system
-
-**HTML Templates:**
-
-- [X] **UTF-8 encoding** - Fixed emoji display issues across all templates
-- [X] **Template structure** - `index.html`, `study.html`, `flashcard.html`
-- [X] **Navigation** - Consistent navbar across pages
-- [X] **Responsive design foundation** - Mobile viewport meta tags
-
-**API Endpoints Working:**
-
-- [X] `GET /api/decks` - List all decks with statistics
-- [X] `GET /api/study/<deck_name>` - Get cards for study session
-- [X] `POST /api/card/difficulty` - Update card difficulty (spaced repetition)
-- [X] `POST /api/deck/create` - Create new deck
-- [X] `POST /api/deck/<deck_name>/add-card` - Add card to deck
-- [X] `DELETE /api/deck/<deck_name>/delete` - Delete deck
-
-### 🎯 Next Immediate Priority
-
-## **CURRENT FOCUS: Frontend JavaScript Integration**
-
-**High Priority:**
-
-- [ ] **JavaScript functionality** - Make flashcards interactive (card flipping, difficulty buttons)
-- [ ] **Dynamic deck loading** - Connect `/study` page to real deck data via API
-- [ ] **Study session flow** - Complete card-by-card study experience
-
-**Medium Priority:**
-
-- [ ] **CSS styling** - Static file serving and visual polish
-- [ ] **Session management** - Track study progress across cards
-- [ ] **Progress indicators** - Visual feedback during study sessions
-
-### ✅ Console Version - COMPLETED & ARCHIVED!
-
-**Console version moved to `backup/` folder - web version is now primary focus**
-
-## Long-term Goals
-
-- **Robust spaced repetition algorithm** similar to Anki
-- **Beautiful, intuitive web interface**
-- **Mobile-first responsive design**
-- **Community deck sharing**
-- **Advanced analytics and progress tracking**
+### **Success Criteria:**
+- ✅ Users can always study a deck (never see "no cards available")
+- ✅ Spaced repetition still works normally for due cards
+- ✅ Hard cards get priority practice when no cards are due
+- ✅ Visual feedback clearly shows study mode (due vs practice)
+- ✅ Existing functionality remains unchanged
 
 ---
 
-## Notes
+## 🎯 Current Status (Nov 8, 2025 - COMPLETED)
 
-- Focus on getting console version 100% working before web migration
-- Prioritize core learning algorithm over fancy features
-- Keep user experience simple and focused
-- Plan for scalability in web version
+### ✅ **Major Accomplishments - Web App Complete!**
+
+- **Flask Web Application** - Fully functional with all features
+- **Spaced Repetition System** - Working with proper difficulty mapping
+- **Interactive Frontend** - Card flipping, difficulty buttons, real-time updates
+- **API Integration** - Complete CRUD operations for decks and cards
+- **Proper Time Management** - Easy cards now due at midnight next day
+- **Fixed Difficulty Mapping** - 1=Easy(1day), 2=Medium(5min), 3=Hard(30sec)
+
+### 🎉 **Ready for Tomorrow's Focus: Infinite Study Mode**
+
+The foundation is solid - now we enhance the study experience to be more engaging and continuous!

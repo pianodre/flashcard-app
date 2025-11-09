@@ -7,9 +7,9 @@
       "question": "Hola",
       "answer": "Hello",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T17:34:33.001940",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Adiós",
@@ -118,10 +118,10 @@
     {
       "question": "Trabajo",
       "answer": "Work/Job",
-      "difficulty": 3,
+      "difficulty": 1,
       "times_studied": 1,
-      "last_review": "2025-11-08T16:56:40.943888",
-      "next_review": "2025-11-08T17:01:40.943894"
+      "last_review": "2025-11-08T17:30:57.995488",
+      "next_review": "2025-11-09T00:00:00"
     }
   ]
 }

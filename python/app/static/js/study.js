@@ -94,9 +94,8 @@ function createDeckCard(deck) {
 
 // Convert display name to filename format
 function getDeckFileName(displayName) {
-    // Convert "Spanish Vocabulary" to "spanish_vocab" etc.
     const nameMap = {
-        'Spanish Vocabulary': 'spanish_vocab',
+        'Spanish Vocabulary': 'spanish_vocabulary',
         'Python Basics': 'python_basics',
         'Math problems': 'math_problems'
     };
