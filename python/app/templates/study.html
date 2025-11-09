@@ -4,15 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Study Decks - Revu</title>
-        <link rel="stylesheet" href="../static/css/styles.css">
-        <link rel="stylesheet" href="../static/css/study.css">
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <link rel="stylesheet" href="/static/css/study.css">
     </head>
     <body>
         <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="nav-logo">
-                <a href="index.html">
-                    <img src="../static/images/revu-logo.png" alt="Revu Logo" class="logo-img">
+                <a href="/">
+                    <img src="/static/images/revu-logo.png" alt="Revu Logo" class="logo-img">
                 </a>
             </div>
             <div class="nav-menu">
@@ -27,12 +27,32 @@
             <div class="study-header">
                 <h1>Choose a Deck to Study</h1>
                 <p>Select a deck to start your learning session</p>
+                <button onclick="refreshDecks()" style="
+                    background: #2196F3;
+                    color: white;
+                    border: none;
+                    padding: 8px 16px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                    margin-top: 10px;
+                    transition: background 0.3s, opacity 0.5s ease-in;
+                    opacity: 0;
+                    animation: fadeIn 0.8s ease-in 0.3s forwards;
+                " onmouseover="this.style.background='#1976D2'" onmouseout="this.style.background='#2196F3'">🔄 Refresh Decks</button>
+                
+                <style>
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                </style>
             </div>
 
             <!-- Deck List -->
             <div class="deck-list">
                 <!-- Sample Deck 1 -->
-                <a href="flashcard.html" style="text-decoration: none; color: inherit;">
+                <a href="/study/python_basics" style="text-decoration: none; color: inherit;">
                     <div class="deck-card">
                         <div class="deck-info">
                             <div class="deck-name">Python Basics</div>
@@ -79,5 +99,9 @@
             </div>
             -->
         </div>
+        
+        <!-- Load JavaScript -->
+        <script src="/static/js/api.js"></script>
+        <script src="/static/js/study.js"></script>
     </body>
 </html>

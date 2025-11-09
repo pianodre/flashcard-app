@@ -37,8 +37,21 @@ def get_decks():
             deck = deck_manager.load_deck(deck_name)
             if deck:
                 # Get due cards count
-                due_cards = len(deck.get_due_cards())
+                due_cards_list = deck.get_due_cards()
+                due_cards = len(due_cards_list)
                 total_cards = len(deck.cards)
+                
+                # Debug logging
+                print(f"DEBUG: Deck '{deck.name}' - Total: {total_cards}, Due: {due_cards}")
+                
+                # Show ALL cards and their due status
+                for i, card in enumerate(deck.cards):
+                    is_due = card.is_due_for_review()
+                    print(f"  Card {i}: '{card.question[:30]}...' - next_review: {card.next_review}, is_due: {is_due}")
+                    
+                # Show which specific cards are due
+                due_cards_debug = [i for i, card in enumerate(deck.cards) if card.is_due_for_review()]
+                print(f"  Due card indices: {due_cards_debug}")
                 
                 deck_info = {
                     'name': deck.name,
@@ -63,9 +76,11 @@ def get_study_cards(deck_name):
         cards = deck.get_due_cards()
         
         card_data = []
-        for i, card in enumerate(cards):
+        for card in cards:
+            # Find the actual index of this card in the full deck
+            actual_index = deck.cards.index(card)
             card_info = {
-                'id': i,  # Add card index for difficulty updates
+                'id': actual_index,  # Use actual deck index, not due cards index
                 'question': card.get_question(),
                 'answer': card.get_answer(),
                 'difficulty': card.get_difficulty()
@@ -101,8 +116,10 @@ def update_card_difficulty():
             
         card = deck.cards[data['card_index']] # get card
         print(f"DEBUG: Found card: {card.question}")
+        print(f"DEBUG: Before update - next_review: {card.next_review}")
         # Only update difficulty, keep existing question and answer
         card.edit_flashcard(card.question, card.answer, data['difficulty']) # update card difficulty
+        print(f"DEBUG: After update - next_review: {card.next_review}")
 
         deck_manager.save_deck(deck) # save deck
 

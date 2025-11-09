@@ -7,99 +7,113 @@
       "question": "What is 2 + 2?",
       "answer": "4",
       "difficulty": 3,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:20.600509"
+      "times_studied": 5,
+      "last_review": "2025-11-08T16:56:16.471918",
+      "next_review": "2025-11-08T17:01:16.471923"
     },
     {
       "question": "What is 5 × 3?",
       "answer": "15",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:24.710330"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:19.536697",
+      "next_review": "2025-11-08T17:00:19.536700"
     },
     {
       "question": "What is 12 ÷ 4?",
       "answer": "3",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:25.680630"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:20.007120",
+      "next_review": "2025-11-08T17:00:20.007126"
     },
     {
       "question": "What is 7 - 3?",
       "answer": "4",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:26.093846"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:20.354970",
+      "next_review": "2025-11-08T17:00:20.354975"
     },
     {
       "question": "What is 8 × 7?",
       "answer": "56",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:26.486977"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:20.591172",
+      "next_review": "2025-11-08T17:00:20.591177"
     },
     {
       "question": "What is 144 ÷ 12?",
       "answer": "12",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:30.165162"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:20.825349",
+      "next_review": "2025-11-08T17:00:20.825354"
     },
     {
       "question": "What is 15² (15 squared)?",
       "answer": "225",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:31.968831"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:21.043046",
+      "next_review": "2025-11-08T17:00:21.043091"
     },
     {
       "question": "What is √64 (square root of 64)?",
       "answer": "8",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:33.018804"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:21.267846",
+      "next_review": "2025-11-08T17:00:21.267852"
     },
     {
       "question": "What is 25% of 80?",
       "answer": "20",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:33.785488"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:21.502746",
+      "next_review": "2025-11-08T17:00:21.502771"
     },
     {
       "question": "What is 3⁴ (3 to the power of 4)?",
       "answer": "81",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:34.458277"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:21.737393",
+      "next_review": "2025-11-08T17:00:21.737399"
     },
     {
       "question": "What is the area of a rectangle with length 6 and width 4?",
       "answer": "24",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:35.097285"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:21.959837",
+      "next_review": "2025-11-08T17:00:21.959843"
     },
     {
       "question": "What is 0.5 + 0.25?",
       "answer": "0.75",
-      "difficulty": 1,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:36.409502"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:22.182120",
+      "next_review": "2025-11-08T17:00:22.182123"
     },
     {
       "question": "What is 1/3 + 1/6?",
       "answer": "1/2 or 0.5",
-      "difficulty": 2,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:38.050196"
+      "difficulty": 3,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:22.418493",
+      "next_review": "2025-11-08T17:00:22.418499"
     },
     {
       "question": "What is the circumference of a circle with radius 5? (Use π ≈ 3.14)",
       "answer": "31.4",
-      "difficulty": 3,
-      "times_studied": 3,
-      "last_review": "2025-11-08T11:26:41.781677"
+      "difficulty": 1,
+      "times_studied": 4,
+      "last_review": "2025-11-08T16:55:24.400048",
+      "next_review": "2025-11-08T16:55:54.400062"
     }
   ]
 }
