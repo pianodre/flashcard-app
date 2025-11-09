@@ -44,7 +44,10 @@ class Flashcard:
         now = datetime.now()
 
         if difficulty == 1:  # Easy
-            next_time = now + timedelta(days=1)
+            # Get tomorrow's date
+            next_day = now + timedelta(days=1)
+            # Set time to exactly midnight (00:00:00.000)
+            next_time = next_day.replace(hour=0, minute=0, second=0, microsecond=0)
         elif difficulty == 2:  # Medium
             next_time = now + timedelta(minutes=5)
         elif difficulty == 3:  # Hard
