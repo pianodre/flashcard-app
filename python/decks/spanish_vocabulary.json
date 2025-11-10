@@ -15,105 +15,105 @@
       "question": "Adiós",
       "answer": "Goodbye",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T17:35:48.900975",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Gracias",
       "answer": "Thank you",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:11.888523",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Por favor",
       "answer": "Please",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:12.980738",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "¿Cómo estás?",
       "answer": "How are you?",
-      "difficulty": 2,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "difficulty": 1,
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:13.654704",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Me llamo",
       "answer": "My name is",
-      "difficulty": 2,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "difficulty": 1,
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:14.162804",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "¿Cuánto cuesta?",
       "answer": "How much does it cost?",
-      "difficulty": 3,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "difficulty": 1,
+      "times_studied": 2,
+      "last_review": "2025-11-08T21:41:56.402776",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "No entiendo",
       "answer": "I don't understand",
-      "difficulty": 2,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "difficulty": 1,
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:18.258639",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "¿Dónde está el baño?",
       "answer": "Where is the bathroom?",
-      "difficulty": 3,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "difficulty": 1,
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:18.956186",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Disculpe",
       "answer": "Excuse me",
-      "difficulty": 2,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "difficulty": 1,
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:19.577316",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Agua",
       "answer": "Water",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:20.432974",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Comida",
       "answer": "Food",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:21.226849",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Casa",
       "answer": "House",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:21.922062",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Familia",
       "answer": "Family",
       "difficulty": 1,
-      "times_studied": 0,
-      "last_review": null,
-      "next_review": null
+      "times_studied": 1,
+      "last_review": "2025-11-08T21:41:22.631584",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "Trabajo",

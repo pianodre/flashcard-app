@@ -6,58 +6,58 @@
     {
       "question": "What is 2 + 2?",
       "answer": "4",
-      "difficulty": 3,
-      "times_studied": 5,
-      "last_review": "2025-11-08T16:56:16.471918",
-      "next_review": "2025-11-08T17:01:16.471923"
+      "difficulty": 2,
+      "times_studied": 7,
+      "last_review": "2025-11-08T21:50:32.297990",
+      "next_review": "2025-11-08T21:55:32.297995"
     },
     {
       "question": "What is 5 × 3?",
       "answer": "15",
       "difficulty": 3,
-      "times_studied": 4,
-      "last_review": "2025-11-08T16:55:19.536697",
-      "next_review": "2025-11-08T17:00:19.536700"
+      "times_studied": 5,
+      "last_review": "2025-11-08T21:50:34.007987",
+      "next_review": "2025-11-08T21:51:04.007991"
     },
     {
       "question": "What is 12 ÷ 4?",
       "answer": "3",
       "difficulty": 3,
-      "times_studied": 4,
-      "last_review": "2025-11-08T16:55:20.007120",
-      "next_review": "2025-11-08T17:00:20.007126"
+      "times_studied": 5,
+      "last_review": "2025-11-08T21:50:37.856599",
+      "next_review": "2025-11-08T21:51:07.856605"
     },
     {
       "question": "What is 7 - 3?",
       "answer": "4",
       "difficulty": 3,
-      "times_studied": 4,
-      "last_review": "2025-11-08T16:55:20.354970",
-      "next_review": "2025-11-08T17:00:20.354975"
+      "times_studied": 5,
+      "last_review": "2025-11-08T21:50:40.321709",
+      "next_review": "2025-11-08T21:51:10.321714"
     },
     {
       "question": "What is 8 × 7?",
       "answer": "56",
       "difficulty": 3,
-      "times_studied": 4,
-      "last_review": "2025-11-08T16:55:20.591172",
-      "next_review": "2025-11-08T17:00:20.591177"
+      "times_studied": 5,
+      "last_review": "2025-11-08T21:50:43.139885",
+      "next_review": "2025-11-08T21:51:13.139890"
     },
     {
       "question": "What is 144 ÷ 12?",
       "answer": "12",
       "difficulty": 3,
-      "times_studied": 4,
-      "last_review": "2025-11-08T16:55:20.825349",
-      "next_review": "2025-11-08T17:00:20.825354"
+      "times_studied": 5,
+      "last_review": "2025-11-08T21:50:47.055550",
+      "next_review": "2025-11-08T21:51:17.055555"
     },
     {
       "question": "What is 15² (15 squared)?",
       "answer": "225",
-      "difficulty": 3,
-      "times_studied": 4,
-      "last_review": "2025-11-08T16:55:21.043046",
-      "next_review": "2025-11-08T17:00:21.043091"
+      "difficulty": 1,
+      "times_studied": 5,
+      "last_review": "2025-11-08T21:50:52.339093",
+      "next_review": "2025-11-09T00:00:00"
     },
     {
       "question": "What is √64 (square root of 64)?",
